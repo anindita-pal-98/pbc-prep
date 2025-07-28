@@ -22,13 +22,14 @@
 
 
 
-let str = "aaabbcccdeffghij";
+let str = "aaabb";
 
 let count = 1;
 let result = "";
 
 
-for (let i = 0; i < str.length; i++) {
+for (let i = 0; i < str.length-1; i++) {
+    console.log(str[i + 1])
     if (str[i] === str[i + 1]) {
         count += 1;
     } else {
@@ -40,5 +41,10 @@ for (let i = 0; i < str.length; i++) {
         count = 1;
     }
 }
+ if (count > 1) {                               // to print the last element
+            result += count + str[str.length - 1];
+        } else {
+            result += str[str.length - 1];
+        }
 
 console.log("result", result);
