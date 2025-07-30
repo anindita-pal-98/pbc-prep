@@ -17,6 +17,7 @@
 
 function fib(start = 0, next = 1, input = 13, array = []) {
     let temp = start + next;
+    if (input < 0) return -1;
     if (start <= input) {
         array.push(start);
         start = next;
@@ -26,4 +27,4 @@ function fib(start = 0, next = 1, input = 13, array = []) {
     return array;
 }
 
-console.log(fib(0 ,1 ,21))
+console.log(fib(0 ,1 ,-21))
