@@ -9,7 +9,7 @@ let lastchar = null;
 for(let i = 0; i< str.length; i++) {
 	if (str[i] == " "  && str[i+1] == " ") continue;
 	if (str[i] != " " && str[i+1] == " ") {
-	lastchar = str[i];
+	lastchar = str[i]; 
 	continue;
 	}
 	if (lastchar != null) {
@@ -29,6 +29,7 @@ for(let i = 0; i< str.length; i++) {
 				lastchar=null;
 			}
 		}
+        continue;
 }		
        if (str[i] == str[i+1]) { 
        count++;
