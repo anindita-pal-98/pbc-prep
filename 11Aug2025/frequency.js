@@ -10,7 +10,25 @@ function freq(arr) {
     obj[arr[i]] = count;
     }
     }
-    return obj;
+
+    let max = -Infinity;
+    let min = Infinity;
+    let maxKey = '';
+    let minKey = '';
+
+    for(let j in obj) {
+        console.log(obj[j],obj[j+1])
+        if(obj[j] > max) {
+            max = obj[j]
+            maxKey = j;
+
+        }
+        if(obj[j] < min) {
+            min = obj[j]
+            minKey = j;
+        }
+    }
+    return {max, min, maxKey, minKey};
 }
 
 console.log(freq([10,5,10,15,10,5]))
