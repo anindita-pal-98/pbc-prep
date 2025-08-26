@@ -25,7 +25,7 @@ function mergearray(left, right) {
             j++;
         }
     }
-    console.log(i,j);
+    
     return sortedArray.concat(left.slice(i).concat(right.slice(j)));
 }
 
